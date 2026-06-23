@@ -93,6 +93,8 @@ At a 98:2 class ratio, ROC-AUC is misleading. A model that predicts every transa
 
 ## Key Findings
 
+There were 2,500 duplicate transactions. Every transaction_id appeared twice, with identical attributes but timestamps 1–3 seconds apart — consistent with payment gateway double-submission or client-side retries. These were cleaned before modeling.
+
 ### The model can't predict fraud from these features — and that's a data problem, not a modeling problem
 
 After building and running the model, the results were poor:
